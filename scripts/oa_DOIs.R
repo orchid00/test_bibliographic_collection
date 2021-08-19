@@ -48,9 +48,10 @@ get_data_from_doi <- function(tibble_dois){
   test <- tibble_dois %>%
     mutate(doi_data = purrr::pmap(.l = list(
       dois = doi,
-      email = "paula.martinez@ardc.edu.au",
+      email = "paula.martinez@ardc.edu.au", ## Your email here
       .flatten = TRUE),
-      .f = roadoi::oadoi_fetch))
+      .f = purrr::possibly(roadoi::oadoi_fetch, ## the saving function
+                           otherwise = NA)))    ## returns NA is no data is found
   
     return(test)
 }
@@ -58,44 +59,32 @@ get_data_from_doi <- function(tibble_dois){
 # testing:
 # one row, 
 # two rows 
-test1 <- nested_dois[1:2, ] %>% 
-  mutate(doi_data1 = purrr::map(.x = data,
-    .f = get_data_from_doi))
+# test1 <- nested_dois[1:2, ] %>% 
+#   mutate(doi_data1 = purrr::map(.x = data,
+#     .f = get_data_from_doi))
 
-#test1to9 <- test_all
+# a few rows with causes crashes have been identified
 # save
-#save(test1to9, file = "test1to9_oa_lists.RData")
-# will skip 10 
-#test11 <- test_all
-#save(test11, file = "test11_oa_lists.RData")
-# will skip 12, 13
-#test14 <- test_all
-#save(test14, file = "test14_oa_lists.RData")
-#skip 15
-#test16_17 <- test_all
-#save(test16_17, file = "test16_17_oa_lists.RData")
-#skip 18
-#test19_23 <- test_all
-#save(test19_23, file = "test19_23_oa_lists.RData")
-#skip 24
-#test25_29 <- test_all
-#save(test25_29, file = "test25_29_oa_lists.RData")
-#skip 30
-
-test_all <- tibble()
+# 10, 12, 13, 15, 18, 24, 30
+# I stopped the tests after that
 
 
-test <- nested_dois[10, ] %>% 
-              mutate(doi_data1 = purrr::possibly(
-                                  purrr::map(.x = data,
-                                .f = get_data_from_doi),
-                            otherwise = NA)
-              )
 
-test_all <- rbind(test_all, test)
+# test again with the new get_data_from_doi
+# function which is now using possibly as safeguard! :)
+# and it works like a charm :)
+test <- nested_dois[12:13, ] %>% 
+              mutate(doi_data1 = 
+                       purrr::map(.x = data,
+                                  .f = get_data_from_doi)
+               )
 
-  print("done")
-  print(dim(test_all))
+
+#test_all <- tibble()
+#test_all <- rbind(test_all, test)
+
+print("done")
+#print(dim(test_all))
 
 
 
@@ -109,38 +98,26 @@ test_all <- rbind(test_all, test)
 
 # testing ---
 
-#test with 1 orcid 4 dois ----
-system.time({
-  test <- big_table_orcid_doi[212:215, ] %>%
-    mutate(doi_data = purrr::pmap(.l = list(
-                      dois = doi,
-                      email = "paula.martinez@ardc.edu.au",
-                      .flatten = TRUE),
-                      .f = roadoi::oadoi_fetch
-                      ))
-})
-test
 # View(test)
 # rm(test)
 
-doi_data_t <- nested_dois %>% 
-  mutate(doi_data1 = purrr::map(.x = data,
-                                .f = get_data_from_doi))
+filter_oa_best <- function(mydata) {
+    #try next
+  doi_data_t <- tibble()
+  if(!is.null(mydata)) {
+    doi_data_t <- mydata %>% 
+      select(doi, url_for_pdf, url_for_landing_page,
+             license, evidence,
+             version, is_best, is_oa,
+             journal_name, publisher, title,
+             updated_resource) %>%
+      filter(is_best == TRUE)
+  }
+  return(doi_data_t)
+}
 
-
-  # try next 
-#     select(doi, url_for_pdf, url_for_landing_page,
-#            license, evidence,
-#            version, is_best, is_oa,
-#            journal_name, publisher, title,
-#            updated_resource) %>%
-#     filter(is_best == TRUE)
-# 
-#   return(doi_data_t)
-# }
-doi_data_t <- filter_oa_best(test)
-View(doi_data_t)
-rm(doi_data_t)
+new_test <- ((test[[3]][[1]])[[2]][[46]]) # a random selection
+result <- filter_oa_best(new_test)
 
 #test with 1 orcid 89 dois ----
 # ~ 1.636 minutes
@@ -183,32 +160,32 @@ rm(doi_data_t)
 
 ## all results will run in about 
 ## ~ minutes
-system.time({
-  all_oa_dois <- big_table_orcid_doi %>% 
-    mutate(doi_data = purrr::pmap(.l = list(
-      dois = doi,
-      email = "paula.martinez@ardc.edu.au",
-      .flatten = TRUE),
-      .f = roadoi::oadoi_fetch
-    ))
-})
-all_oa_dois
-dim(all_oa_dois)
-str(all_oa_dois)
+# system.time({
+#   all_oa_dois <- big_table_orcid_doi %>% 
+#     mutate(doi_data = purrr::pmap(.l = list(
+#       dois = doi,
+#       email = "paula.martinez@ardc.edu.au",
+#       .flatten = TRUE),
+#       .f = roadoi::oadoi_fetch
+#     ))
+# })
+# all_oa_dois
+# dim(all_oa_dois)
+# str(all_oa_dois)
 
 # 5. save results
-save(all_oa_dois, 
-     file = paste0("all_oa_dois_", lubridate::today(),
-                   ".RData"))
+# save(all_oa_dois, 
+#      file = paste0("all_oa_dois_", lubridate::today(),
+#                    ".RData"))
 
-doi_data_t <- filter_oa_best(all_oa_dois)
-dim(doi_data_t)
-str(doi_data_t)
+# doi_data_t <- filter_oa_best(all_oa_dois)
+# dim(doi_data_t)
+# str(doi_data_t)
 
 # 5. save results
-save(doi_data_t, 
-     file = paste0("doi_data_t_", lubridate::today(),
-                   ".RData"))
+# save(doi_data_t, 
+#      file = paste0("doi_data_t_", lubridate::today(),
+#                    ".RData"))
 
 
 
@@ -217,5 +194,5 @@ save(doi_data_t,
 
 
 # 6. filter those DOIs that are Open Access
-oa_table_doi_info <- big_table_doi_info %>% 
-  filter(is_oa == TRUE)
+# oa_table_doi_info <- big_table_doi_info %>% 
+#   filter(is_oa == TRUE)
