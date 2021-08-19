@@ -1,0 +1,5 @@
+.httr-oauth
+RData/
+.Rbuildignore
+.Rhistory
+.Rproj.user/
