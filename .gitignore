@@ -1,5 +1,6 @@
 .httr-oauth
 RData/
+raw_data/.~lock*
 testing_scripts/
 .Rbuildignore
 .Rhistory
