@@ -23,7 +23,7 @@ library(purrr)
 library(roadoi)
 
 # 3. read data ----
-load("big_table_orcids.RData")
+load("RData/big_table_orcids.RData")
 
 big_table_orcid_doi <- big_table_test_five_orcids %>% 
   select(path, doi = external_id_normalized_value) %>% 
@@ -62,33 +62,38 @@ test1 <- nested_dois[1:2, ] %>%
   mutate(doi_data1 = purrr::map(.x = data,
     .f = get_data_from_doi))
 
-test1to9 <- test_all
+#test1to9 <- test_all
 # save
-save(test1to9, file = "test1to9_oa_lists.RData")
+#save(test1to9, file = "test1to9_oa_lists.RData")
 # will skip 10 
-test11 <- test_all
-save(test11, file = "test11_oa_lists.RData")
+#test11 <- test_all
+#save(test11, file = "test11_oa_lists.RData")
 # will skip 12, 13
-test14 <- test_all
-save(test14, file = "test14_oa_lists.RData")
+#test14 <- test_all
+#save(test14, file = "test14_oa_lists.RData")
 #skip 15
-test16_17 <- test_all
-save(test16_17, file = "test16_17_oa_lists.RData")
+#test16_17 <- test_all
+#save(test16_17, file = "test16_17_oa_lists.RData")
 #skip 18
-test19_23 <- test_all
-save(test19_23, file = "test19_23_oa_lists.RData")
+#test19_23 <- test_all
+#save(test19_23, file = "test19_23_oa_lists.RData")
 #skip 24
-test25_29 <- test_all
-save(test25_29, file = "test25_29_oa_lists.RData")
+#test25_29 <- test_all
+#save(test25_29, file = "test25_29_oa_lists.RData")
 #skip 30
 
 test_all <- tibble()
 
 
-    test <- nested_dois[i, ] %>% 
-              mutate(doi_data1 = purrr::map(.x = data,
-                                .f = get_data_from_doi))
-    test_all <- rbind(test_all, test)
+test <- nested_dois[10, ] %>% 
+              mutate(doi_data1 = purrr::possibly(
+                                  purrr::map(.x = data,
+                                .f = get_data_from_doi),
+                            otherwise = NA)
+              )
+
+test_all <- rbind(test_all, test)
+
   print("done")
   print(dim(test_all))
 
