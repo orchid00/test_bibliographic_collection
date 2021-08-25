@@ -85,7 +85,40 @@ all_dois_data <- nested_dois %>%
   unnest(doi_data)
 
 View(all_dois_data)
+# started at 16:04
+# showed errors at 16:07
+# still running at 16:30
+# still running at 16:48
+# running for more than one hour
+# 17:12
+# 17:27
+# 17:31
+# done at 17:41
+#126 warnings
+options(nwarnings = 10000)
+saved_my_warnings <- summary(warnings())
 
+save(all_dois_data,
+     file = paste0("raw_data/","all_dois_data_", lubridate::today(),
+                   ".RData"))
+
+capture.output(saved_my_warnings,
+     file = paste0("raw_data/","saved_my_warnings_", lubridate::today(),
+                   ".txt"))
+
+first_check <-
+all_dois_data %>% 
+  filter(orcid == "0000-0001-6543-2590")
+
+
+articles_since_2012 <-
+  all_dois_data %>% 
+  filter(year > 2012) %>% 
+  filter(is_best == TRUE)
+
+articles_since_2012_oa <-
+  articles_since_2012 %>% 
+  filter(is_oa == TRUE) 
 
 # function wrapper to get info about DOIs
 # get_data_from_doi <- function(tibble_dois){
