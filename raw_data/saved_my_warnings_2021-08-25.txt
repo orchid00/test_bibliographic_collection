@@ -1,0 +1,201 @@
+Summary of (a total of 50) warning messages:
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/jp01123i' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/ja056619a' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1529/biophys.104.055590' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.12989/scs.2020.35.1.093' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1061/(asce)0733-9372(2002)128:7(635' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1061/(asce)0733-9496(2001)127:6(354' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.4028/3-908454-50-6.74' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/jp0275560o' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1029/2009jdo12311' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.3109/03602532.2015.1071835' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1111/j.1365-2125.1991.tb03988.x' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/acs.pcc.8b08261' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/la0418571i' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1109/twc.2009.0181448' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.2374/sri08sp050' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1016/j.jnonerysol.2007.08.020' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.3933/applrheol-26-5-51' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.3933/applrheol-23-124' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.3933/applrheol-16-340' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.3876/j.issn.1000-1980.2020.03.006' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.12090/j.issn.1006-6616.2019.25.03.037' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.18727/0722-6691/5126' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.18727/0722-6691/5117' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/jp0443781' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1002/1521-4095(200107)13:12/13<957::aid-adma957>3.0.co;2' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1063/1.3599788' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1063/1.3599776' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1063/1.3599777' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.11949/0438-1157.20190701' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.11949/j.issn.0438-1157.20180900' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1010/j.ces.2014.12.059' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.11835/j.issn.1000-582x.2015.05.008' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.3969/j.issn.1005-3026.2014.02.019' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.3969/j.issn.1005-3026.2014.04.018' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/ie3034537' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1080/0276350590902479' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1016/j.cplett.2007.09-090' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1130/2008.2440(06' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.0000/anziamj.v54i0.6302' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/acs.jpclett.6b002178' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/acs.jpclett.6001779' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1038/s41570-0017' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/acs.jpcc.5600918' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1088/20150006255752' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1177/20414196177363' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1007/springerreference_349045' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/jacs.6604788' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1038/b515561d' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1021/ol516420' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
+1x : Problem with `mutate()` column `doi_data`.
+[34mℹ[39m `doi_data = purrr::pmap(...)`.
+[34mℹ[39m Unpaywall request failed [404]
+'10.1504/pcfd.2010.03536' isn't in Unpaywall. See https://support.unpaywall.org/a/solutions/articles/44001900286
