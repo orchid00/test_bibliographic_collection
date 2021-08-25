@@ -36,27 +36,84 @@ big_table_orcid_doi <- big_table_test_five_orcids %>%
 #clean
 rm(big_table_test_five_orcids)
 
-# # Nest DOIs as tibble ----
+# Example ----
+# nested_dois_example <- tibble(
+#   orcid = c("0000-0003-3685-174X",
+#             "0000-0002-8630-1458"),
+#   data =  list(c("10.1130/0016-7606(1997)109<1515:fositc>2.3.co",
+#                  "10.1130/0016-7606(1997)109<1515:fositc>2.3.co;2",
+#                  "10.1175/1087-3562(1999)003<0002:tdmcwc>2.0.co;2"),
+#                c("10.1111/faf.12287",
+#                  "10.1038/nature25504"))
+# )
+
+# Nest DOIs as tibble ----
 nested_dois <-big_table_orcid_doi %>%
-  group_by(orcid) %>%
-  nest(data = c(doi)) %>%
-  ungroup()
+  group_by(orcid) %>% 
+  summarise(doi = list(doi))
 
+#check tibble
 nested_dois
+#View(nested_dois)
 
-get_data_from_doi <- function(tibble_dois){
-  test <- tibble_dois %>%
-    mutate(doi_data = purrr::pmap(.l = list(
-      dois = doi,
-      email = "paula.martinez@ardc.edu.au", ## Your email here
-      .flatten = TRUE),
-      .f = purrr::possibly(roadoi::oadoi_fetch, ## the saving function
-                           otherwise = NA)))    ## returns NA is no data is found
-  
-    return(test)
-}
+# testing
+test <- nested_dois[12:13, ] %>%
+  mutate(doi_data = purrr::pmap(list(
+    dois = doi,
+    email = "paula.martinez@ardc.edu.au",  ### PLEASE add your email here
+    .flatten = TRUE),
+    .f = purrr::possibly(## the saving function
+      roadoi::oadoi_fetch, 
+      otherwise = NA))) %>% 
+  select(-doi) %>% 
+  unnest(doi_data)
 
-# testing:
+View(test)
+# test seems to be working
+
+
+# let's try all
+all_dois_data <- nested_dois %>%
+  mutate(doi_data = purrr::pmap(list(
+    dois = doi,
+    email = "paula.martinez@ardc.edu.au",  ### PLEASE add your email here
+    .flatten = TRUE),
+    .f = purrr::possibly(## the saving function
+      roadoi::oadoi_fetch, 
+      otherwise = NA))) %>% 
+  select(-doi) %>% 
+  unnest(doi_data)
+
+View(all_dois_data)
+
+
+# function wrapper to get info about DOIs
+# get_data_from_doi <- function(tibble_dois){
+#   test <- tibble_dois %>%
+#     mutate(doi_data = purrr::pmap(.l = list(
+#       dois = doi,
+#       email = "paula.martinez@ardc.edu.au", ## Your email here
+#       .flatten = TRUE),
+#       .f = purrr::possibly(roadoi::oadoi_fetch, ## the saving function
+#                            otherwise = NA)))    ## returns NA if no data is found
+#   
+#   # message("Rows where error:")
+#   # print(
+#   #   filter(test, map_lgl(doi_data, is.na))
+#   # )
+#   # message("-----")
+#   return(test)
+# }
+# 
+# # testing:
+# test <- nested_dois[12:13, ] %>% 
+#   mutate(doi_data1 = 
+#            purrr::map(.x = data,
+#                       .f = get_data_from_doi)
+#   )
+# 
+# View(test)
+
 # one row, 
 # two rows 
 # test1 <- nested_dois[1:2, ] %>% 
@@ -73,17 +130,17 @@ get_data_from_doi <- function(tibble_dois){
 # test again with the new get_data_from_doi
 # function which is now using possibly as safeguard! :)
 # and it works like a charm :)
-test <- nested_dois[12:13, ] %>% 
-              mutate(doi_data1 = 
-                       purrr::map(.x = data,
-                                  .f = get_data_from_doi)
-               )
+# test <- nested_dois[12:13, ] %>% 
+#               mutate(doi_data1 = 
+#                        purrr::map(.x = data,
+#                                   .f = get_data_from_doi)
+#                )
 
 
 #test_all <- tibble()
 #test_all <- rbind(test_all, test)
 
-print("done")
+# print("done")
 #print(dim(test_all))
 
 
