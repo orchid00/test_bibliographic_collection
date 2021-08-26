@@ -108,17 +108,23 @@ capture.output(saved_my_warnings,
 
 first_check <-
 all_dois_data %>% 
-  filter(orcid == "0000-0001-6543-2590")
+  filter(is_best == TRUE)
 
+savemyobjectRDS(first_check, "raw_data", "first_check")
+#readRDS("raw_data/first_check_2021-08-26.RData")
 
 articles_since_2012 <-
   all_dois_data %>% 
   filter(year > 2012) %>% 
   filter(is_best == TRUE)
 
+savemyobjectRDS(articles_since_2012, "raw_data", "articles_since_2012")
+
 articles_since_2012_oa <-
   articles_since_2012 %>% 
   filter(is_oa == TRUE) 
+
+savemyobjectRDS(articles_since_2012_oa, "raw_data", "articles_since_2012_oa")
 
 # function wrapper to get info about DOIs
 # get_data_from_doi <- function(tibble_dois){
