@@ -3,7 +3,7 @@ library(lubridate)
 library(rorcid)
 library(purrr)
 
-load("big_table_orcids.RData")
+load("raw_data/big_table_orcids.RData")
 
 big_table <- big_table_test_five_orcids %>% 
   filter(!is.na(external_id_normalized_value)) %>% 

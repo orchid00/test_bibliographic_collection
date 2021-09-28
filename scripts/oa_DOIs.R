@@ -60,7 +60,7 @@ nested_dois
 test <- nested_dois[12:13, ] %>%
   mutate(doi_data = purrr::pmap(list(
     dois = doi,
-    email = "paula.martinez@ardc.edu.au",  ### PLEASE add your email here
+    email = "",  ### PLEASE add your email here
     .flatten = TRUE),
     .f = purrr::possibly(## the saving function
       roadoi::oadoi_fetch, 
@@ -106,10 +106,13 @@ capture.output(saved_my_warnings,
      file = paste0("raw_data/","saved_my_warnings_", lubridate::today(),
                    ".txt"))
 
+#load("raw_data/all_dois_data_2021-08-25.RData")
+
 first_check <-
 all_dois_data %>% 
   filter(is_best == TRUE)
 
+source("R/utils.R")
 savemyobjectRDS(first_check, "raw_data", "first_check")
 #readRDS("raw_data/first_check_2021-08-26.RData")
 
@@ -125,6 +128,19 @@ articles_since_2012_oa <-
   filter(is_oa == TRUE) 
 
 savemyobjectRDS(articles_since_2012_oa, "raw_data", "articles_since_2012_oa")
+
+#write only DOIs
+
+selected_dois <-
+  articles_since_2012_oa %>% 
+  select(doi) 
+
+str(selected_dois)
+
+write_csv(selected_dois, file = paste0(
+  "raw_data/selected_dois_", today(), ".csv"))
+
+#load("raw_data/articles_since_2012_2021-08-26.RData")
 
 # function wrapper to get info about DOIs
 # get_data_from_doi <- function(tibble_dois){
